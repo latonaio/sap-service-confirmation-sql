@@ -1,0 +1,31 @@
+CREATE TABLE `sap_service_confirmation_item_data`
+(
+  `ServiceConfirmation`                varchar(10) NOT NULL,
+  `ServiceConfirmationItem`            varchar(6) NOT NULL,
+  `ServiceConfItemDescription`         varchar(40) DEFAULT NULL,
+  `ServiceObjectType`                  varchar(10) DEFAULT NULL,
+  `ServiceDocumentItemObjectType`      varchar(10) DEFAULT NULL,
+  `Language`                           varchar(2) DEFAULT NULL,
+  `Product`                            varchar(54) DEFAULT NULL,
+  `Quantity`                           varchar(15) DEFAULT NULL,
+  `QuantityUnit`                       varchar(3) DEFAULT NULL,
+  `ActualServiceDuration`              varchar(9) DEFAULT NULL,
+  `ActualServiceDurationUnit`          varchar(3) DEFAULT NULL,
+  `ServiceConfItemCategory`            varchar(4) DEFAULT NULL,
+  `ServiceConfItemIsCompleted`         varchar(1) DEFAULT NULL,
+  `ExecutingServiceEmployee`           varchar(10) DEFAULT NULL,
+  `ServicePerformer`                   varchar(32) DEFAULT NULL,
+  `BillableControl`                    varchar(2) DEFAULT NULL,
+  `ReferenceServiceOrder`              varchar(10) DEFAULT NULL,
+  `ReferenceServiceOrderItem`          varchar(6) DEFAULT NULL,
+  `ParentServiceConfItem`              varchar(6) DEFAULT NULL,
+  `ActualServiceStartDateTime`         varchar(80) DEFAULT NULL,
+  `ActualServiceEndDateTime`           varchar(80) DEFAULT NULL,
+  `ServicesRenderedDate`               varchar(80) DEFAULT NULL,
+  `TimeSheetOvertimeCategory`          varchar(4) DEFAULT NULL,
+  `RespyMgmtServiceTeam`               varchar(8) DEFAULT NULL,
+  `RespyMgmtServiceTeamName`           varchar(40) DEFAULT NULL,
+    PRIMARY KEY (`ServiceConfirmation`, `ServiceConfirmationItem`),
+    CONSTRAINT `SAPServiceConfirmationItemData_fk` FOREIGN KEY (`ServiceConfirmation`) REFERENCES `sap_service_confirmation_general_data` (`ServiceConfirmation`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4;

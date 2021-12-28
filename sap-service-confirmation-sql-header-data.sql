@@ -1,0 +1,33 @@
+CREATE TABLE `sap_service_confirmation_header_data`
+(
+  `ServiceConfirmation`                varchar(10) NOT NULL,
+  `ServiceConfirmationType`            varchar(4) DEFAULT NULL,
+  `ServiceConfirmationDescription`     varchar(40) DEFAULT NULL,
+  `ServiceObjectType`                  varchar(10) DEFAULT NULL,
+  `Language`                           varchar(2) DEFAULT NULL,
+  `ServiceDocumentPriority`            varchar(1) DEFAULT NULL,
+  `RequestedServiceStartDateTime`      varchar(80) DEFAULT NULL,
+  `RequestedServiceEndDateTime`        varchar(80) DEFAULT NULL,
+  `PurchaseOrderByCustomer`            varchar(35) DEFAULT NULL,
+  `CustomerPurchaseOrderDate`          varchar(80) DEFAULT NULL,
+  `ServiceConfirmationIsCompleted`     varchar(1) DEFAULT NULL,
+  `ServiceConfirmationIsCanceled`      tinyint(1) DEFAULT NULL,
+  `SalesOrganization`                  varchar(4) DEFAULT NULL,
+  `DistributionChannel`                varchar(2) DEFAULT NULL,
+  `Division`                           varchar(2) DEFAULT NULL,
+  `SalesOffice`                        varchar(4) DEFAULT NULL,
+  `SalesGroup`                         varchar(3) DEFAULT NULL,
+  `SoldToParty`                        varchar(10) DEFAULT NULL,
+  `ShipToParty`                        varchar(10) DEFAULT NULL,
+  `BillToParty`                        varchar(10) DEFAULT NULL,
+  `PayerParty`                         varchar(10) DEFAULT NULL,
+  `ContactPerson`                      varchar(10) DEFAULT NULL,
+  `ReferenceServiceOrder`              varchar(10) DEFAULT NULL,
+  `ServiceConfirmationIsFinal`         varchar(1) DEFAULT NULL,
+  `TransactionCurrency`                varchar(5) DEFAULT NULL,
+  `RespyMgmtServiceTeam`               varchar(8) DEFAULT NULL,
+  `RespyMgmtServiceTeamName`           varchar(40) DEFAULT NULL,
+  `ServiceOrganization`                varchar(14) DEFAULT NULL,
+    PRIMARY KEY (`ServiceConfirmation`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4;
