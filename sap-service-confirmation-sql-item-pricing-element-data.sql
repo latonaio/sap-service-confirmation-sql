@@ -10,6 +10,6 @@ CREATE TABLE `sap_service_confirmation_item_pricing_element_data`
   `ConditionQuantity`                  varchar(6) DEFAULT NULL,
   `ConditionQuantityUnit`              varchar(3) DEFAULT NULL,
     PRIMARY KEY (`ServiceConfirmation`, `ServiceConfirmationItem`),
-    CONSTRAINT `SAPServiceConfirmationItemPricingElementData_fk` FOREIGN KEY (`ServiceConfirmation`) REFERENCES `sap_service_confirmation_general_data` (`ServiceConfirmation`)
+    CONSTRAINT `SAPServiceConfirmationItemPricingElementData_fk` FOREIGN KEY (`ServiceConfirmation`) REFERENCES `sap_service_confirmation_item_data` (`ServiceConfirmation`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

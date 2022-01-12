@@ -26,6 +26,6 @@ CREATE TABLE `sap_service_confirmation_item_data`
   `RespyMgmtServiceTeam`               varchar(8) DEFAULT NULL,
   `RespyMgmtServiceTeamName`           varchar(40) DEFAULT NULL,
     PRIMARY KEY (`ServiceConfirmation`, `ServiceConfirmationItem`),
-    CONSTRAINT `SAPServiceConfirmationItemData_fk` FOREIGN KEY (`ServiceConfirmation`) REFERENCES `sap_service_confirmation_general_data` (`ServiceConfirmation`)
+    CONSTRAINT `SAPServiceConfirmationItemData_fk` FOREIGN KEY (`ServiceConfirmation`) REFERENCES `sap_service_confirmation_header_data` (`ServiceConfirmation`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
